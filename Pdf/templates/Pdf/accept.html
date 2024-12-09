@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+  <!-- jQuery (required by Bootstrap 4) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<!-- Popper.js (required by Bootstrap 4 for tooltips and popovers) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Bootstrap 4.0.0 JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10">
+        <form method="post">
+          {% csrf_token %}
+          <div class="form-group">
+            <label for="">Name</label>
+            <input type="text" class="form-control" id="name" name = "name" placeholder="Enter name">
+          </div>
+          <div class="form-group">
+            <label for="">Email</label>
+            <input type="email" class="form-control" id="email" name ="email" placeholder="Enter email">
+          </div>
+          <div class="form-group">
+            <label for="">Phone</label>
+            <input type="text" class="form-control" id="phone" name ="phone" placeholder="phone">
+          </div>
+          <div class="form-group">
+            <label for="">About youself</label>
+            <textarea type="text" class="form-control" id="summary" name ="summary" placeholder="about yourself"></textarea>  
+          </div>
+      
+          <div class="form-group">
+            <label for="">degree</label>
+            <input type="text" class="form-control" id="degree" name ="degree" placeholder="Enter Degree">
+          </div>
+      
+          <div class="form-group">
+            <label for="">School</label>
+            <input type="text" class="form-control" id="school" name ="school" placeholder="Enter School">
+          </div>
+      
+          <div class="form-group">
+            <label for="">university</label>
+            <input type="text" class="form-control" id="university" name ="university" placeholder="Enter University">
+          </div>
+          
+          <div class="form-group">
+            <label for="">previous_work</label>
+            <textarea type="text" class="form-control" id="previous_work" name ="previous_work" placeholder="Work Experience"></textarea>
+          </div>
+      
+          <div class="form-group">
+            <label for="">Skills</label>
+            <textarea type="text" class="form-control" id="skills" name ="skills" placeholder="Enter the skills"></textarea>
+          </div>
+            
+          <button type="submit" class="btn btn-primary">Submit</button>
+          <a href="{% url 'list' %}" type="submit" class="btn btn-warning">list of CVs</a>
+        </form>
+      </div>
+    </div>
+  </div>
+  
+</body>
+</html>

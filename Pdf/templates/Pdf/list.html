@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+  <title>Document</title>
+
+  
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+
+
+<!-- jQuery (required by Bootstrap 4) -->
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+
+<!-- Popper.js (required by Bootstrap 4 for tooltips and popovers) -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+
+<!-- Bootstrap 4.0.0 JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row m-5">
+      <div class="col-md-12">
+          <h2>CV databases ProfileLIst</h2>
+      </div>
+    </div>
+
+    {% for profile in profiles %}
+      <div class="row">
+       <div class="col-md-6">
+        {{profile.name}}
+       </div>
+        <div class="col-md-6">
+          <a href="/{{profile.id}}" class="btn btn-warning">Download CV</a>
+        </div>
+      
+      </div><hr>
+     {% endfor %}
+  </div>
+</body>
+</html>
